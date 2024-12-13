@@ -3,7 +3,6 @@ public class Main {
         System.out.println("Hello, World!");
         System.out.println();
 
-
         System.out.println("Задача 1");
         // Ввод OS (0 — iOS, 1 — Android)
         int clientOs = 1;
@@ -15,7 +14,6 @@ public class Main {
             System.out.println("Вы ввели не корректные данные");
         }
         System.out.println();
-
 
         System.out.println("Задача 2");
         // Ввод OS (0 — iOS, 1 — Android)
@@ -38,7 +36,6 @@ public class Main {
         }
         System.out.println();
 
-
         System.out.println("Задача 3");
         int year = 2024;
         if (year > 1584) {
@@ -51,7 +48,6 @@ public class Main {
             System.out.println("Год должен быть больше, чем 1584");
         }
         System.out.println();
-
 
         System.out.println("Задача 4");
         int deliveryDistance = 95;
@@ -69,7 +65,6 @@ public class Main {
         System.out.println("Потребуется дней: " + deliveryDay);
         System.out.println();
 
-        
         System.out.println("Задача 5");
         int monthNumber = 12;
         switch (monthNumber) {
