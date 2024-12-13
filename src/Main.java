@@ -36,7 +36,6 @@ public class Main {
         }
         System.out.println();
 
-
         System.out.println("Задача 3");
         int year = 2024;
         if (year > 1584) {
