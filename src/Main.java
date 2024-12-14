@@ -41,24 +41,14 @@ public class Main {
         System.out.println();
 
         System.out.println("Задача 3");
-        int year = 2024; // Задать год
-        if (year > 1584) { // Проверяем, что год больше 1584
-            if (year % 4 == 0) { // Второй уровень вложенности: проверяем кратность 4
-                if (year % 100 == 0) { // Проверяем кратность 100
-                    if (year % 400 == 0) { // Проверяем кратность 400
-                        System.out.println(year + " год является високосным.");
-                    } else {
-                        System.out.println(year + " год не является високосным.");
-                    }
-                } else {
-                    System.out.println(year + " год является високосным.");
-                }
-            } else {
-                System.out.println(year + " год не является високосным.");
-            }
+        int year = 2024;
+        if (year > 1584 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
+            System.out.println(year + " год является високосным");
         } else {
-            System.out.println("Год должен быть больше 1584.");
+            System.out.println(year + " год не является високосным");
         }
+        
+
         System.out.println();
 
         System.out.println("Задача 4");
