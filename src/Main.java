@@ -3,7 +3,6 @@ public class Main {
         System.out.println("Hello, World!");
         System.out.println();
 
-
         System.out.println("Задача 1");
         // Ввод OS (0 — iOS, 1 — Android)
         int clientOs = 1;
