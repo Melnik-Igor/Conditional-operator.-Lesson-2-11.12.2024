@@ -17,36 +17,48 @@ public class Main {
         System.out.println();
 
         System.out.println("Задача 2");
-        // Ввод OS (0 — iOS, 1 — Android)
-        int clientOS = 0;
+        int clientOS = 1;
         int clientDeviceYear = 2015;
-        if (clientOS == 1) {
-            if (clientDeviceYear < 2015) {
+        // Проверяем год устройства
+        if (clientDeviceYear < 2015) {
+            // Первый уровень вложенности: проверяем операционную систему
+            if (clientOS == 0) {
+                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+            } else if (clientOS == 1) {
                 System.out.println("Установите облегченную версию приложения для Android по ссылке");
             } else {
-                System.out.println("Установите версию приложения для Android по ссылке");
-            }
-        } else if (clientOS == 0) {
-            if (clientDeviceYear < 2015) {
-                System.out.println("Установите облегченную версию приложения для iOS по ссылке");
-            } else {
-                System.out.println("Установите версию приложения для iOS по ссылке");
+                System.out.println("Вы ввели некорректные данные.");
             }
         } else {
-            System.out.println("Вы ввели не корректные данные");
+            // Первый уровень вложенности: проверяем операционную систему
+            if (clientOS == 0) {
+                System.out.println("Установите версию приложения для iOS по ссылке");
+            } else if (clientOS == 1) {
+                System.out.println("Установите версию приложения для Android по ссылке");
+            } else {
+                System.out.println("Вы ввели некорректные данные.");
+            }
         }
         System.out.println();
 
         System.out.println("Задача 3");
-        int year = 2024;
-        if (year > 1584) {
-            if (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {
-                System.out.println(year + " год является високосным");
+        int year = 2024; // Задать год
+        if (year > 1584) { // Проверяем, что год больше 1584
+            if (year % 4 == 0) { // Второй уровень вложенности: проверяем кратность 4
+                if (year % 100 == 0) { // Проверяем кратность 100
+                    if (year % 400 == 0) { // Проверяем кратность 400
+                        System.out.println(year + " год является високосным.");
+                    } else {
+                        System.out.println(year + " год не является високосным.");
+                    }
+                } else {
+                    System.out.println(year + " год является високосным.");
+                }
             } else {
-                System.out.println(year + " год не является високосным");
+                System.out.println(year + " год не является високосным.");
             }
-        } else if (year < 1584) {
-            System.out.println("Год должен быть больше, чем 1584");
+        } else {
+            System.out.println("Год должен быть больше 1584.");
         }
         System.out.println();
 
